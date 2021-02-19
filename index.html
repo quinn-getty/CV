@@ -31,7 +31,7 @@
     }
 
     .page2 {
-      page-break-before: always;
+      /* page-break-before: always; */
       margin-top: 30px;
     }
   </style>
@@ -256,6 +256,27 @@
         margin: 0;
       }
     }
+    .flex{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .mr{
+      margin-right: 0em;
+    }
+    .link{
+      text-decoration-line: none;
+    }
+    .QRcode{
+      width: 9em;
+    }
+    .preview{
+      display: inline-block;
+      margin-left: 50%;
+      transform: translate(-50%,0);
+    }
+    .a-wrapper{
+      text-align: center;
+    }
   </style>
 </head>
 
@@ -264,87 +285,133 @@
     <section class="bio">
       <h1>高强强</h1>
       <p>
-        男 | 24岁 | 前端开发工程师 | 昆明
+        男 <span style="margin: 0 4px;">|</span> 24岁 <span style="margin: 0 4px;">|</span> 前端开发工程师 <span style="margin: 0 4px;">|</span> 昆明
       </p>
-      <p>
-        手机：<a href="tel:15504473441">15504473441</a> | 
-        微信：<a class="wechat-copy"  href='weixin://GQiangQ_'>GQiangQ_</a>  | 
-        邮箱：<a href="mailto:qqiangg.cn@gmail.com?subject=TestObject">qqiangg.cn@gmail.com</a>
-      </p>
+      <div class="flex">
+        <span class="mr">手机：<a class="link" href="tel:15504473441">15504473441</a><span style="margin: 0 4px;">|</span></span>
+        <span class="mr">微信：<a class="link wechat-copy"  href='weixin://GQiangQ_'>GQiangQ_</a><span style="margin: 0 4px;">|</span></span>
+        <span class="mr">邮箱：<a class="link href="mailto:qqiangg.cn@gmail.com?subject=TestObject">qqiangg.cn@gmail.com</a></span>
+      </div>
+    </section>
+    <section class="openSource">
+      <h2>闭源项目</h2>
+      <ul>
+        <li>
+          <header>
+            <h3>自己写的 DOM 库</h3>
+          </header>
+          <p>实现了元素选择、元素创建、<strong>事件委托</strong>、滑动手势等常见功能</p>
+        </li>
+        <li class="page2">
+          <header>
+            <h3>会动的哆啦A梦</h3>
+          </header>
+          <p>这是我在学习 <strong>CSS3和动画</strong> 时制作的一个可爱作品</p>
+        </li>
+        <li>
+          <header>
+            <h3>简易画板</h3>
+          </header>
+          <p>我在学习 <strong>Canvas</strong> 时做的一个小作品</p>
+        </li>
+      </ul>
     </section>
 
-
-
-
-
-
     <section class="projects">
-      <h2>项目经历</h2>
+      <h2>开源项目</h2>
       <ol>
         <li>
-          <header>
+          <header class="title">
             <h3>weui组件</h3>
-            <span>
-              <a href="#">源码链接</a>
-              <a href="#">项目预览</a>
-            </span>
           </header>
-          <p>
-            一款基于 <strong>Vue2</strong> / <strong>TypeScript</strong> / <strong>Webpack</strong> 的 UI 框架。
-
-          </p>
-          <p>
-            主要组件有日期选择器、弹出框、<strong>下拉更新</strong>、树形选择器等。
-
-          </p>
-          <p>
-            已被公司前端同事广泛使用，有效提高前端团队的开发效率。
-
-          </p>
-          <p>
-            制作过程让我对 TypeScript 和单元测试有了新的认识。
-            我将其总结成了一篇博客《TS 泛型的使用》。
-          </p>
+          <section class="introduce">
+            <p>
+              该项目是参照 Ant Design、Element UI、iView 等 UI 库思路，做的一个基于 Vue 的简易 UI 组件库，目前已支持按钮、输入框、网格、布局、Toast、Tabs、Popover、手风琴等组件。每个组件均经历从需求分析到 Mocha 单元测试，并用 TravisCI 实现持续集成，最终以 VuePress 为基础制作官方文档，发布于 npmjs.org。完成该项目使我对 Vue 组件化等常用特征更加熟悉，同时提升了自己对前端工程化流程以及单元测试重要性的深刻理解，近一步开源文化。
+            </p>
+            <p>
+              每个组件均经历从需求分析到 Mocha 单元测试，并用 TravisCI 实现持续集成，最终以 VuePress 为基础制作官方文档，发布于 npmjs.org。完成该项目使我对 Vue 组件化等常用特征更加熟悉，同时提升了自己对前端工程化流程以及单元测试重要性的深刻理解，近一步开源文化。
+            </p>
+            <p>
+              已被公司前端同事广泛使用，有效提高前端团队的开发效率。
+            </p>
+            <p>
+              制作过程让我对 TypeScript 和单元测试有了新的认识。
+              我将其总结成了一篇博客《TS 泛型的使用》。
+            </p>
+          </section>
+          <div class="preview">
+            <img class="QRcode" src="./src/images/WEUI.png" alt="">
+            <div class="a-wrapper">
+              <a href="https://github.com/GqiangQ/weui">源码链接</a>
+              <a href="https://gqiangq.github.io/weui/">项目预览</a>
+            </div>
+          </div>
         </li>
         <li>
           <header>
-            <h3>gui for vue3</h3>
-            
-            <span>
+            <h3>GUI for vue3</h3>
+          </header>
+          <section class="introduce">
+            <p>
+              这是一个基于 <strong>vue3</strong> 和 <strong>ts</strong> 的多页面应用。
+            </p>
+            <p>
+              主要功能包括微信登录、手机验证、直播、点播、反盗版、答题系统、课程管理系统等。
+              从数据库设计到前端展示，都是由我主导，另有两名前端辅助我。
+            </p>
+            <p>
+              该系统<strong>大幅提高教学效率</strong>，优化教学流程，受到公司和用户的好评。
+            </p>
+          </section>
+          <div class="preview">
+            <img class="QRcode" src="./src/images/GUI.png" alt="">
+            <div class="a-wrapper">
               <a href="https://gitee.com/qqiangg/Vue3-gui">源码私有</a>
               <a href="https://gqiangq.gitee.io/vue3-gui/#/">项目预览</a>
-            </span>
-          </header>
-          <p>
-            这是一个基于 <strong>vue3</strong> 和 <strong>ts</strong> 的多页面应用。
-          </p>
-          <p>
-            主要功能包括微信登录、手机验证、直播、点播、反盗版、答题系统、课程管理系统等。
-            从数据库设计到前端展示，都是由我主导，另有两名前端辅助我。
-          </p>
-          <p>
-            该系统<strong>大幅提高教学效率</strong>，优化教学流程，受到公司和用户的好评。
-          </p>
+            </div>
+          </div>
         </li>
         <li>
           <header>
-            <h3>旺财记账</h3>
-            <span>
-              <a href="#">源码私有</a>
-              <a href="#">项目预览</a>
-            </span>
+            <h3>极速博客</h3>
           </header>
-          <p>
-            一个基于 <strong>React</strong> / <strong>TypeScript</strong> 的移动端单页面应用。
-          </p>
+          <section class="introduce">
+            <p>
+              一个基于 <strong>React</strong> / <strong>TypeScript</strong> 的移动端单页面应用。
+            </p>
 
-          <p>
-            这是我从自己的需求出发，设计出的极简记账应用，特点是快速记账，
-            而且可以通过图表查看自己的消费习惯。
-          </p>
-          <p>
-            该项目大量使用 <strong>React Hooks</strong>，让我对 Hooks 有了深刻的理解和应用。
-          </p>
+            <p>
+              这是我从自己的需求出发，设计出的极简记账应用，特点是快速记账，
+              而且可以通过图表查看自己的消费习惯。
+            </p>
+            <p>
+              该项目大量使用 <strong>React Hooks</strong>，让我对 Hooks 有了深刻的理解和应用。
+            </p>
+          </section>
+          <div class="preview">
+            <img class="QRcode" src="./src/images/GUI.png" alt="">
+            <div class="a-wrapper">
+              <a href="https://gitee.com/qqiangg/Vue3-gui">源码私有</a>
+              <a href="https://gqiangq.gitee.io/vue3-gui/#/">项目预览</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <header>
+            <h3>随手画板</h3>
+          </header>
+          <section class="introduce">
+            <p>
+              一款使用纯原生 JS ，以及 HTML 5 的 Canvas 元素 等开发的画图工具。 支持在 PC 端及移动端在线作画，提供了画笔粗细、颜色调整，撤退、前进，画作删除等功能，并支持画作下载。与此同时，使用 lectron 生成了客户端版本，便于桌面随时使用。
+            </p>
+          </section>
+          <div class="preview">
+            <img class="QRcode" src="./src/images/GUI.png" alt="">
+            <div class="a-wrapper">
+              <a href="https://gitee.com/qqiangg/Vue3-gui">源码私有</a>
+              <a href="https://gqiangq.gitee.io/vue3-gui/#/">项目预览</a>
+            </div>
+          </div>
         </li>
       </ol>
     </section>
@@ -370,50 +437,14 @@
     </section>
 
 
-
-    <section class="openSource">
-      <h2>开源项目</h2>
-      <ul>
-        <li>
-          <header>
-            <h3>自己写的 DOM 库</h3>
-            <a href="#">源码链接</a>
-          </header>
-          <p>实现了元素选择、元素创建、<strong>事件委托</strong>、滑动手势等常见功能</p>
-        </li>
-        <li class="page2">
-          <header>
-            <h3>会动的哆啦A梦</h3>
-            <span>
-              <a href="#">源码链接</a>
-              <a href="https://fangyinghang.com/make-a-pikachu/">项目预览</a>
-            </span>
-          </header>
-          <p>这是我在学习 <strong>CSS3和动画</strong> 时制作的一个可爱作品</p>
-        </li>
-        <li>
-          <header>
-            <h3>简易画板</h3>
-            <span>
-              <a href="#">源码链接</a>
-              <a href="#">项目预览</a>
-            </span>
-          </header>
-          <p>我在学习 <strong>Canvas</strong> 时做的一个小作品</p>
-        </li>
-      </ul>
-    </section>
-
-
-
     <section class="jobs">
       <h2>工作经历</h2>
       <ol>
         <li>
           <header>
-            <h3> 彩云工作室 </h3>
-            <h4>全栈开发工程师（Ruby+JS）</h4>
-            <span><time>2017年1月</time>~<time>2018年1月</time></span>
+            <h3> 吉林昊远科技有限公司 </h3>
+            <h4>初级前端开发工程师+美工</h4>
+            <span><time>2019年5月</time>~<time>2020年7月</time></span>
           </header>
           <ul>
             <li>
@@ -429,9 +460,9 @@
         </li>
         <li>
           <header>
-            <h3>哦外巴巴集团杭州总部</h3>
-            <h4>开发工程师</h4>
-            <span><time>2015年1月</time>~<time>2017年1月</time></span>
+            <h3>云南九机科技有限公司（原三九手机网）</h3>
+            <h4>中级前端开工程师</h4>
+            <span><time>2020年9月</time>~<time>至今</time></span>
           </header>
           <ul>
             <li>独立负责某 CRM 系统的开发与维护（后端使用Groovy，前端使用JS）</li>
@@ -453,8 +484,8 @@
     <section class="education">
       <h2>教育经历</h2>
       <p>
-        <span><time>2008年</time>~<time>2012年</time></span>
-        关山口职业技术学校 软件学院 本科</p>
+        <span><time>2016年</time>~<time>2019年</time></span>
+        长春工业大学 计算机信息管理专业</p>
     </section>
 
   </article>
