@@ -51,9 +51,9 @@
       color: #f60;
     }
     a {
-      color: #999;
+      color: #666;
+      text-decoration-line: none;
       text-decoration: none;
-      border-bottom: 1px solid;
     }
 
     p, li {
@@ -143,7 +143,7 @@
     .openSource header {
       position: relative;
       display: flex;
-      justify-content: space-between;
+      /* justify-content: space-between; */
     }
   </style>
   <style>
@@ -203,9 +203,9 @@
     .mr{
       margin-right: 0em;
     }
-    .link{
+    /* .link{
       text-decoration-line: none;
-    }
+    } */
     .QRcode{
       width: 9em;
     }
@@ -217,15 +217,42 @@
     .a-wrapper{
       text-align: center;
     }
+    section{
+      margin-bottom: 1em;
+    }
+    h2{
+      line-height: 2em;
+    }
+    .tag{
+      background: #eeaa8a;
+      padding: .18em .4em;
+      color: #eee;
+      margin-left: .5em;
+      font-weight: 600;
+      font-size: 1em;
+      border-radius: 4px;
+    }
+    .showPint {
+      display: none;
+    }
+    @media print {
+    #showPint{display:block;}
+    }
+    .showPc{
+      display: block;
+    }
+    @media print {
+    #showPint{display:none;}
+    }
   </style>
 </head>
 
 <body>
   <article>
     <section class="bio">
-      <h1>高强强</h1>
+      <h2>高强强</h2>
       <p>
-        男 <span style="margin: 0 4px;">|</span> 24岁 <span style="margin: 0 4px;">|</span> 前端开发工程师 <span style="margin: 0 4px;">|</span> 昆明
+        男 <span style="margin: 0 4px;">|</span> 24岁 <span style="margin: 0 4px;">|</span> 前端开发工程师 <span style="margin: 0 4px;">|</span> 昆明 <span style="margin: 0 4px;">|</span> 在职
       </p>
       <div class="flex">
         <span class="mr">手机：<a class="link" href="tel:15504473441">15504473441</a><span style="margin: 0 4px;">|</span></span>
@@ -234,48 +261,29 @@
       </div>
     </section>
     <section class="openSource">
-      <h2>工作项目</h2>
+      <h2>项目经历</h2>
       <ul>
         <li>
           <header>
             <h3>复工登记</h3>
           </header>
-          <p>主要功能是为帮助疫情复工单位的人员上报的应用，涉及到统计复工单位，收集人员信息，自动化归类公司员工测量体温手机，异常报警提示等。疫情期间经过高效远程沟通，使得项目提前上线。</p>
-          <p>技术栈：Vue2 Vant UI VueX VueRouter VueCli</p>
+          <p>
+            一款基于<strong>Vue</strong> / <strong>Vant UI</strong> 的疫情复工单位的人员上报的应用。
+            该项目使用 Axios 分装数据请求，以 <strong>Vuex</strong> 管理全局数据状态，使用 <strong>VueCli</strong> 进行项目的基础搭建，自动化归类公司员工测量体温手机，基于Echart <strong>数据可视化</strong>异常报警提示等。疫情期间经过高效远程沟通，使得项目提前上线。</p>
+          <p>技术栈：Vue2 、Vant UI、VueX、<strong>VueRouter</strong>、VueCli</p>
         </li>
-        <li class="page2">
-          <header>
-            <h3>九讯云</h3>
-          </header>
-          <p>是基于九机现有的销售系统，进行精简和优化处理的一个O2O产品，经过五个月团队的开发圆满完成预期工期，并且有多家租户上线使用，目前项目处于对云南白药公司的个性化自定开发中。</p>
-          <p>技术栈：Vue2 AntdV VueX VueRouter Webpack <span>(个性化制定已尝试Vite Vue3 VueX4 VueRouter4)</span> </p>
-          <p></p>
-        </li>
-        <li>
-          <header>
-            <h3>九机OA</h3>
-          </header>
-          <p>是九机员工使用的一款内部办公软件和O2O系统的整合。主要包括内部员工管理的有人事管理、分公司管理、销售管理等。以及销售系统的库存管理、进货管理、市场管理等。提高员工的工作效率，和完善流程化的操作，方便快捷。</p>
-          <p>技术栈：Vue2 AntdV VueX VueRouter Webpack</p>
-        </li>
-      </ul>
-    </section>
-
-    <section class="projects">
-      <h2>开源项目</h2>
-      <ol>
-        <li>
+         <li>
           <header class="title">
-            <h3>weui组件</h3>
+            <h3>WeUI组件</h3><span class="tag">开源项目</span>
           </header>
           <section class="introduce">
             <p>
-              该项目是参照 Ant Design、Element UI、iView 等 UI 库思路，做的一个基于 Vue 的简易 UI 组件库，目前已支持按钮、输入框、网格、布局、Toast、Tabs、Popover、手风琴等组件。每个组件均经历从需求分析到 Mocha 单元测试，并用 TravisCI 实现持续集成，最终以 VuePress 为基础制作官方文档，发布于 npmjs.org。</p>
+              该项目是参照 <strong>Ant Design</strong>、<strong>Element UI</strong>、<strong>iView</strong> 等 UI 库思路，做的一个基于 <strong>Vue</strong> 的简易 UI 组件库，目前已支持按钮、输入框、网格、布局、Toast、Tabs、Popover、手风琴等组件。每个组件均经历从需求分析到 <strong>Mocha</strong>  单元测试，并用 <strong>TravisCI</strong> 实现持续集成，最终以 <strong>VuePress</strong> 为基础制作官方文档，发布于 npmjs.org。</p>
             <p>完成该项目使我对 Vue 组件化等常用特征更加熟悉，同时提升了自己对前端工程化流程以及单元测试重要性的深刻理解，近一步开源文化。</p>
           </section>
           <div class="preview">
             <img class="QRcode" src="./src/images/WEUI.png" alt="">
-            <div class="a-wrapper">
+            <div class="a-wrapper showPc" >
               <a href="https://github.com/GqiangQ/weui">源码链接</a>
               <a href="https://gqiangq.github.io/weui/">项目预览</a>
             </div>
@@ -283,19 +291,19 @@
         </li>
         <li>
           <header>
-            <h3>GUI（weui组件的升级）</h3>
+            <h3>GUI（weui组件的升级）</h3><span class="tag">开源项目</span>
           </header>
           <section class="introduce">
             <p>
-              该项目是对weui项目的重构。对技术架构的升级，使用Vite构建项目，用到<strong>Vue3</strong>、<strong>VueRouter4</strong>、<strong>VueX</strong>等新特性。目前重构的组件有按钮 、alert switch、Dialog、tabs等。
+              该项目是对weui项目的重构。对技术架构的升级，使用Vite构建项目，用到<strong>Vue3</strong>、<strong>VueRouter4</strong>、<strong>VueX</strong>等新特性。目前重构的组件有Button 、Alert Switch、Dialog、Tabs等。
             </p>
             <p>
-              对这个项目的重构是为了学习vue3的新特性，并且对<strong>Vite</strong>脚手架有了新的认识。对这些学习到的新技术做了相关的总结发布在自己的博客中。
+              对这个项目的重构是为了学习<strong>vue3</strong>的<strong>新特性</strong>，并且对<strong>Vite</strong>脚手架有了新的认识。对这些学习到的新技术做了相关的总结发布在自己的博客中。
             </p>
           </section>
           <div class="preview">
             <img class="QRcode" src="./src/images/GUI.png" alt="">
-            <div class="a-wrapper">
+            <div class="a-wrapper showPc">
               <a href="https://gitee.com/qqiangg/Vue3-gui">源码私有</a>
               <a href="https://gqiangq.gitee.io/vue3-gui/#/">项目预览</a>
             </div>
@@ -303,7 +311,14 @@
         </li>
         <li>
           <header>
-            <h3>极速博客</h3>
+            <h3>九机OA</h3>
+          </header>
+          <p>是九机员工使用的一款内部<strong>办公软件</strong>和<strong>O2O</strong>系统的整合。主要包括内部员工管理的有人事管理、分公司管理、销售管理等。以及销售系统的库存管理、进货管理、市场管理等。提高员工的工作效率，和完善<strong>流程化</strong>的操作，方便快捷。</p>
+          <p>技术栈：Vue2 AntdV VueX VueRouter Webpack</p>
+        </li>
+        <li>
+          <header>
+            <h3>极速博客</h3><span class="tag">开源项目</span>
           </header>
           <section class="introduce">
             <p>
@@ -318,7 +333,7 @@
           </section>
           <div class="preview">
             <img class="QRcode" src="./src/images/GUI.png" alt="">
-            <div class="a-wrapper">
+            <div class="a-wrapper showPc">
               <a href="https://gitee.com/qqiangg/Vue3-gui">源码私有</a>
               <a href="https://gqiangq.gitee.io/vue3-gui/#/">项目预览</a>
             </div>
@@ -326,28 +341,37 @@
         </li>
         <li>
           <header>
-            <h3>随手画板</h3>
+            <h3>随手画板</h3><span class="tag">开源项目</span>
           </header>
           <section class="introduce">
             <p>
-              一款使用纯原生 JS ，以及 HTML 5 的 Canvas 元素 等开发的画图工具。 支持在 PC 端及移动端在线作画，提供了画笔粗细、颜色调整，撤退、前进，画作删除等功能，并支持画作下载。与此同时，使用 lectron 生成了客户端版本，便于桌面随时使用。
+              一款使用<strong>纯原生 JS</strong> ，以及 <strong>HTML 5</strong> 的 <strong>Canvas</strong> 元素等开发的画图工具。 支持在 PC 端及移动端在线作画，提供了画笔粗细、颜色调整，撤退、前进，画作删除等功能，并支持画作下载。与此同时，使用 lectron 生成了客户端版本，便于桌面随时使用。
             </p>
           </section>
           <div class="preview">
             <img class="QRcode" src="./src/images/GUI.png" alt="">
-            <div class="a-wrapper">
+            <div class="a-wrapper showPc">
               <a href="https://gitee.com/qqiangg/Vue3-gui">源码私有</a>
               <a href="https://gqiangq.gitee.io/vue3-gui/#/">项目预览</a>
             </div>
           </div>
         </li>
-      </ol>
+        <li class="page2">
+          <header>
+            <h3>九讯云</h3>
+          </header>
+          <p>是基于九机现有的内部系统，进行精简和优化处理的一个O2O产品，经过五个月团队的开发圆满完成预期工期，并且有多家租户上线使用，目前项目处于对云南白药公司的个性化自定开发中。</p>
+          <p>技术栈：Vue2 <strong>AntdV</strong> VueX VueRouter <strong>Webpack</strong> <span>(个性化制定已尝试 <strong>Vite</strong><strong>Vue3</strong> <strong>VueX4</strong> <strong>VueRouter4</strong>)</span> </p>
+          <p></p>
+        </li>
+      </ul>
     </section>
-
-
-
-
-
+    <section class="education">
+      <h2>教育经历</h2>
+      <p>
+        <span><time>2016年</time>~<time>2019年</time></span>
+        长春工业大学 计算机信息管理专业</p>
+    </section>
     <section class="skills">
       <h2>技能</h2>
       <div class="wrapper">
@@ -378,16 +402,16 @@
           </header>
           <ul>
             <li>
-              独立负责公司页面的构建，以及UI的交互效果。
+              <strong>独立负责</strong>公司页面的构建，以及UI的交互效果。
             </li>
             <li>
-              根据要求编写HTML、CSS和JS代码，还原设计稿上的布局和配色,开发PC/Mobile端应用
+              根据要求编写HTML、CSS和JS代码，<strong>还原设计稿</strong>上的布局和配色,开发PC/Mobile端应用
             </li>
             <li>
-              与后端同事一起研讨技术实现方案，指定服务接口与测试，和后端共同优化、维护网站性能。
+              与后端同事一起研讨技术实现方案，指定服务接口与测试，和后端共同<strong>优化</strong>、维护<strong>网站性能</strong>。
             </li>
             <li>
-              作为前端开发，负责给后端普及前端知识，提高其前端开发工作效率。
+              作为前端开发，负责给后端普及前端知识，提高其前端开发<strong>工作效率</strong>。
             </li>
           </ul>
         </li>
@@ -401,8 +425,8 @@
           </header>
           <ul>
             <li>开发小型系统,维护租户个性化需求</li>
-            <li>负责oa系统前端架构的翻新，主要开发售、前售财务后模块和负责内部自营组件的分装和基于andv UI库的二次分装</li>
-            <li>定期组织内部分享，包括 Git 的使用、<strong>ES6 新特性</strong>、TypeScript、vite 等话题</li>
+            <li>负责oa系统前端架构的翻新，主要开发售、前售财务后模块和负责内部自营组件的分装和基于andv UI库的<strong>二次分装</strong></li>
+            <li>定期组织内部分享，包括 Git 的使用、<strong>ES6 新特性</strong>、<strong>TypeScript</strong>、<strong>vite</strong> 等话题</li>
           </ul>
         </li>
       </ol>
@@ -415,13 +439,6 @@
         <li><a href="https://github.com/frankfang">我的 GitHub</a>，过去三个月有 200 次提交</li>
       </ul>
     </section> -->
-
-    <section class="education">
-      <h2>教育经历</h2>
-      <p>
-        <span><time>2016年</time>~<time>2019年</time></span>
-        长春工业大学 计算机信息管理专业</p>
-    </section>
 
   </article>
   <script src="https://cdn.bootcss.com/echarts/4.6.0/echarts.min.js"></script>
