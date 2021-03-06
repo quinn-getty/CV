@@ -105,8 +105,20 @@
       width: 500px;
       height: 270px;
     }
+    .printShow{
+      display: none;
+    }
     @media print {
       #skills{display:none;}
+      .printShow{
+        display: block;
+      }
+      .a-wrapper{
+        display: none;
+      }
+      .showPc{
+        display: none;
+      }
     }
 
 
@@ -244,6 +256,10 @@
     @media print {
     #showPint{display:none;}
     }
+    .tops{
+      font-size: .5em;
+      color: #455cff;
+    }
   </style>
 </head>
 
@@ -288,6 +304,10 @@
               <a href="https://gqiangq.github.io/weui/">项目预览</a>
             </div>
           </div>
+          <div class="printShow">
+            <span>源码地址：https://github.com/GqiangQ/weui</span>
+            <span>预览地址：https://gqiangq.github.io/weui/</span>
+          </div>
         </li>
         <li>
           <header>
@@ -307,6 +327,10 @@
               <a href="https://gitee.com/qqiangg/Vue3-gui">源码私有</a>
               <a href="https://gqiangq.gitee.io/vue3-gui/#/">项目预览</a>
             </div>
+          </div>
+          <div class="printShow">
+            <span>源码地址：https://gitee.com/qqiangg/Vue3-gui</span>
+            <span>预览地址：https://gqiangq.gitee.io/vue3-gui/#/</span>
           </div>
         </li>
         <li>
@@ -330,13 +354,18 @@
             <p>
               该项目我对 <strong>React Hooks</strong>，静态及服务器端融合渲染<strong>SSR</strong>有了深刻的理解和应用。
             </p>
+            <p class="tops">本项目发布在一核1M带宽的服务器中，加载缓慢请见谅！</p>
           </section>
           <div class="preview">
-            <img class="QRcode" src="./src/images/GUI.png" alt="">
+            <img class="QRcode" src="./src/images/blog.png" alt="">
             <div class="a-wrapper showPc">
-              <a href="https://gitee.com/qqiangg/Vue3-gui">源码私有</a>
-              <a href="https://gqiangq.gitee.io/vue3-gui/#/">项目预览</a>
+              <a href="https://github.com/GqiangQ/blog">源码地址</a>
+              <a href="www.qqiangg.cn:3000">项目预览</a>
             </div>
+          </div>
+          <div class="printShow">
+            <span>源码地址：https://github.com/GqiangQ/blog</span>
+            <span>预览地址：www.qqiangg.cn:3000</span>
           </div>
         </li>
         <li>
@@ -347,13 +376,20 @@
             <p>
               一款使用<strong>纯原生 JS</strong> ，以及 <strong>HTML 5</strong> 的 <strong>Canvas</strong> 元素等开发的画图工具。 支持在 PC 端及移动端在线作画，提供了画笔粗细、颜色调整，撤退、前进，画作删除等功能，并支持画作下载。与此同时，使用 lectron 生成了客户端版本，便于桌面随时使用。
             </p>
+            <p class="tops">请在pc端预览！</p>
           </section>
           <div class="preview">
-            <img class="QRcode" src="./src/images/GUI.png" alt="">
-            <div class="a-wrapper showPc">
-              <a href="https://gitee.com/qqiangg/Vue3-gui">源码私有</a>
-              <a href="https://gqiangq.gitee.io/vue3-gui/#/">项目预览</a>
+            <img class="QRcode" src="./src/images/Canvas.png" alt="">
+            <div>
             </div>
+            <div class="a-wrapper showPc">
+              <a href="https://gitee.com/qqiangg/Canvas">源码私有</a>
+              <a href="https://qqiangg.gitee.io/canvas/">项目预览</a>
+            </div>
+          </div>
+          <div class="printShow">
+            <span>源码地址：https://gitee.com/qqiangg/Canvas</span>
+            <span>预览地址：https://qqiangg.gitee.io/canvas/</span>
           </div>
         </li>
         <li class="page2">
