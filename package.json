@@ -1,5 +1,14 @@
 {
-  "devDependencies": {
-    "cssnano": "^4.1.10"
+  "name": "CV",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/GqiangQ/CV.git",
+  "author": "QuinnGeter <qqiangg.cn@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "vite": "^2.7.13"
   }
 }
