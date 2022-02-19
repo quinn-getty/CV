@@ -1,0 +1,16 @@
+.QRcode{
+  width: 9em;
+}
+.preview{
+  display: inline-block;
+  margin-left: 50%;
+  transform: translate(-50%,0);
+  .showPc {
+    display: flex;
+    justify-content: center;
+    a{
+      color: #5593c3;
+      // padding: 0 8px;
+    }
+  } 
+}
