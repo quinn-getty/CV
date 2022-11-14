@@ -4,5 +4,8 @@ import reactRefresh from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   base: './',
-  plugins: [reactRefresh()]
+  plugins: [reactRefresh()],
+  build: {
+    outDir: 'docs'
+  }
 })
