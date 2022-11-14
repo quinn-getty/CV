@@ -2,4 +2,44 @@
   a{
     color: #666;
   }
+  .flex{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .contact_item + .contact_item{
+    margin-left: 10px;
+  }
+  .contact{
+    display: flex;
+    &_item{
+    }
+  }
+  .link{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    a{
+      color: #2479b4;
+    }
+    .link_item + .link_item{
+      margin-left: 10px;
+      @media print {
+        margin-left: 0;
+      }
+    }
+    .link_item{
+      display: flex;
+      @media print {
+        width: 100%;
+      }
+    }
+    &_url{
+      display: none;
+      @media print {
+        display: block;
+      }
+    }
+   
+  }
 }
+

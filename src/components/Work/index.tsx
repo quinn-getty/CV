@@ -2,6 +2,7 @@ import React from 'react'
 import Work1 from './Work1'
 import Work2 from './Work2'
 import Work3 from './Work3'
+import SongRise from './SongRise'
 import './index.scss'
 
 const Work = () => {
@@ -18,6 +19,7 @@ const Work = () => {
   </section>
   <section>
     <h2>工作经历</h2>
+    <SongRise />
     <Work1 />
     <Work2 />
     <Work3 />

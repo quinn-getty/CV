@@ -15,9 +15,7 @@ const Work1 = () => {
     </section>
     <ul className='project'>
       <li>
-        <header>
-          <h4>复工登记</h4>
-        </header>
+        <h4>复工登记</h4>
         <p>
           一款基于<strong>Vue</strong> / <strong>Vant UI</strong> 的疫情复工单位的人员上报的应用。
           该项目使用 Axios 分装数据请求，以 <strong>Vuex</strong> 管理全局数据状态，使用 <strong>VueCli</strong> 进行项目的基础搭建，自动化归类公司员工测量体温手机，基于Echart <strong>数据可视化</strong>异常报警提示等。疫情期间经过高效远程沟通，使得项目提前上线。</p>
